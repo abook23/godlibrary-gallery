@@ -41,7 +41,7 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 # 图片墙
 
-<img src="art/5.png" width="30%">
+<img src="art/5.jpg" width="30%">
 
 ```java
 ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
