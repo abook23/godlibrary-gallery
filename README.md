@@ -19,7 +19,7 @@ PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String
 示例
 ```java
 
-PhotoActivity.startActivityForResult(this, 9, null, int 0)
+PhotoActivity.startActivityForResult(this, 9, null, 0)
 
 
 @Override
