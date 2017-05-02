@@ -3,7 +3,7 @@ godlibrary-gallery
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ### Image
-<img src="art/2.png" width="30%">
+<img src="art/1.png" width="30%">
 
 # 使用方法
 
@@ -41,9 +41,9 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ```
 
 ### Image
+<img src="art/2.png" width="30%">
 <img src="art/3.png" width="30%">
 <img src="art/4.png" width="30%">
-<img src="art/5.png" width="30%">
 
 License
 -------
