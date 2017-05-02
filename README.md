@@ -1,7 +1,7 @@
 godlibrary-gallery
 ======================
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-
+<img src="art/1.jpg" width="30%">
 # 使用方法
 ###Stop1
 ```java
@@ -20,7 +20,7 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ##自定义相机
 ```java
         CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
-		//没特殊要求,sd 就可以了,HD 的视频有点大,微信就相当于SD模式
+        //没特殊要求,sd 就可以了,HD 的视频有点大,微信就相当于SD模式
         videoFragment.setDefinition(CameraVideoFragment.Definition.SD);
         videoFragment.setVideoMaxDuration(60 * 1000);//最大录入时间,默认10s
         videoFragment.setVideoRatio(0.8f);//视频质量 ----微信视频 质量大概在 0.8f 左右, 要清晰一点,就调节大一些
