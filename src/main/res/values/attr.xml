@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="VideoProgress">
+        <attr name="vp_color1" format="color" />
+        <attr name="vp_color2" format="color" />
+        <attr name="vp_color3" format="color" />
+        <attr name="vp_radius1" format="float" />
+        <attr name="vp_radius2" format="float" />
+        <attr name="vp_startAngle" format="float" />
+        <attr name="vp_max" format="float" />
+        <attr name="vp_progress" format="float" />
+        <attr name="vp_roundWidth" format="float" />
+    </declare-styleable>
+</resources>
