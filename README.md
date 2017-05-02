@@ -7,20 +7,44 @@ godlibrary-gallery
 
 # 使用方法
 
-##Stop1
+## Stop1
 ```java
 compile 'com.abook23:godlibrary-gallery:1.1'
 ```
-##Stop2
+## Stop2
 ```java
 PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String> checkPath, int resultCode)
 ```
+## Stop3
+示例
+```java
 
+PhotoActivity.startActivityForResult(this, 9, null, int 0)
+
+
+@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            if (requestCode == 0) {
+                ArrayList<String> list = data.getStringArrayListExtra(PhotoActivity.DATA);
+                if (list.size() == 0) {
+                    return;
+                }
+                StringBuffer sb = new StringBuffer();
+                for (String s : list) {
+                    sb.append("\n").append(s);
+                }
+                L.d(sb.toString());
+            }
+        }
+    }
+```
 # 图片墙
 ```java
 ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ```
-##自定义相机
+## 自定义相机
 ```java
         CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
         //没特殊要求,sd 就可以了,HD 的视频有点大,微信就相当于SD模式
