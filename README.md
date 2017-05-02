@@ -12,8 +12,6 @@ godlibrary-gallery
 ### Image
 <img src="art/1.png" width="30%">
 
-# 使用方法
-
 # dependencies
 
 ```html
@@ -24,7 +22,9 @@ dependencies {
     compile 'com.sprylab.android.texturevideoview:texturevideoview:1.2.1'
     compile 'com.android.support:recyclerview-v7:25.1.0'
 }
+```
 
+# 使用方法
 
 ## Stop1
 ```java
