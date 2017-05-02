@@ -24,7 +24,8 @@ PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String
 ```
 ## 示例
 ```java
-
+//PhotoActivity.CHECK_BUTTON_COLOR = R.color.;//选择按钮颜色
+//PhotoActivity.COLOR_BACK_BUTTON = R.color.;// 顶部背景颜色
 PhotoActivity.startActivityForResult(this, 9, null, 0)
 
 
