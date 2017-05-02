@@ -49,14 +49,12 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 ```
 # 图片墙
 
-<img src="art/5.jpg" width="30%">
-
 ```java
 ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ```
-## 自定义相机
+<img src="art/5.jpg" width="30%">
 
-<img src="art/4.png" width="30%">
+## 自定义相机
 
 ```java
         CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
@@ -76,6 +74,8 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
         transaction.add(R.id.videoFragment, videoFragment);
         transaction.commit();
 ```
+
+<img src="art/4.png" width="30%">
 
 ### Image
 <img src="art/2.png" width="30%">
