@@ -43,7 +43,6 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ### Image
 <img src="art/2.png" width="30%">
 <img src="art/3.png" width="30%">
-<img src="art/4.png" width="30%">
 
 License
 -------
