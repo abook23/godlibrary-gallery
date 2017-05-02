@@ -1,7 +1,7 @@
 godlibrary-gallery
 ======================
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
-<img src="art/1.jpg" width="30%">
+<img src="art/1.png" width="30%">
 # 使用方法
 ###Stop1
 ```java
