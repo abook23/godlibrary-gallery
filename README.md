@@ -12,18 +12,6 @@ godlibrary-gallery
 ### Image
 <img src="art/1.png" width="30%">
 
-# dependencies
-
-```html
-dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:support-v4:25.1.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.sprylab.android.texturevideoview:texturevideoview:1.2.1'
-    compile 'com.android.support:recyclerview-v7:25.1.0'
-}
-```
-
 # 使用方法
 
 ## Stop1
@@ -92,6 +80,18 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ### Image
 <img src="art/2.png" width="30%">
 <img src="art/3.png" width="30%">
+
+# 第三方 引用 dependencies
+
+```html
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.sprylab.android.texturevideoview:texturevideoview:1.2.1'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+}
+```
 
 License
 -------
