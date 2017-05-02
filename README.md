@@ -19,7 +19,7 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ```
 ##自定义相机
 ```java
-		CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
+CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
 		//没特殊要求,sd 就可以了,HD 的视频有点大,微信就相当于SD模式
         videoFragment.setDefinition(CameraVideoFragment.Definition.SD);
         videoFragment.setVideoMaxDuration(60 * 1000);//最大录入时间,默认10s
