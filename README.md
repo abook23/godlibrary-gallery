@@ -14,6 +14,18 @@ godlibrary-gallery
 
 # 使用方法
 
+# dependencies
+
+```html
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:25.1.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.sprylab.android.texturevideoview:texturevideoview:1.2.1'
+    compile 'com.android.support:recyclerview-v7:25.1.0'
+}
+
+
 ## Stop1
 ```java
 compile 'com.abook23:godlibrary-gallery:1.1'
