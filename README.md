@@ -7,12 +7,11 @@ godlibrary-gallery
 
 # 使用方法
 
-###Stop1
+##Stop1
 ```java
 compile 'com.abook23:godlibrary-gallery:1.1'
 ```
-###Stop2
-打开相册
+##Stop2
 ```java
 PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String> checkPath, int resultCode)
 ```
