@@ -2,6 +2,13 @@ godlibrary-gallery
 ======================
 [![License](https://img.shields.io/badge/license-Apache%202-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 
+
+# 简介
+1. 相册选取图片，图片按照选择顺序排序
+2. 图片预览
+3. 点击拍照，长按录像
+
+
 ### Image
 <img src="art/1.png" width="30%">
 
