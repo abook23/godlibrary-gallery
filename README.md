@@ -17,7 +17,7 @@ compile 'com.abook23:godlibrary-gallery:1.1'
 PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String> checkPath, int resultCode)
 ```
 
-图片墙
+# 图片墙
 ```java
 ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ```
@@ -40,8 +40,8 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
         transaction.add(R.id.videoFragment, videoFragment);
         transaction.commit();
 ```
-### Image
 
+### Image
 <img src="art/3.png" width="30%">
 <img src="art/4.png" width="30%">
 <img src="art/5.png" width="30%">
