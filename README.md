@@ -40,10 +40,16 @@ protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     }
 ```
 # 图片墙
+
+<img src="art/5.png" width="30%">
+
 ```java
 ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 ```
 ## 自定义相机
+
+<img src="art/4.png" width="30%">
+
 ```java
         CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
         //没特殊要求,sd 就可以了,HD 的视频有点大,微信就相当于SD模式
