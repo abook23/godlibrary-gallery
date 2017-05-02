@@ -4,7 +4,9 @@ godlibrary-gallery
 
 ### Image
 <img src="art/2.png" width="30%">
+
 # 使用方法
+
 ###Stop1
 ```java
 compile 'com.abook23:godlibrary-gallery:1.1'
