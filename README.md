@@ -15,16 +15,15 @@ compile 'com.abook23:godlibrary-gallery:1.1'
 ```java
 PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String> checkPath, int resultCode)
 ```
-## Stop3
-示例
+## 示例
 ```java
 
 PhotoActivity.startActivityForResult(this, 9, null, 0)
 
 
 @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+    super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             if (requestCode == 0) {
                 ArrayList<String> list = data.getStringArrayListExtra(PhotoActivity.DATA);
