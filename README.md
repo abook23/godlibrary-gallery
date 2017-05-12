@@ -16,7 +16,7 @@ godlibrary-gallery
 
 ## Stop1
 ```java
-compile 'com.abook23:godlibrary-gallery:1.1'
+ compile 'com.abook23:godlibrary-gallery:1.1.2'
 ```
 ## Stop2
 ```java
