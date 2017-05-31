@@ -13,6 +13,9 @@
         <meta-data
             android:name="com.god.gallery.util.CustomCachingGlideModule"
             android:value="GlideModule" />
+        <activity android:name=".PhotoActivity"/>
+        <activity android:name=".ImageInfoActivity"/>
+        <activity android:name=".SelectImagesActivity"/>
     </application>
 
 </manifest>
