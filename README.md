@@ -16,7 +16,7 @@ godlibrary-gallery
 
 ## Stop1
 ```java
- compile 'com.abook23:godlibrary-gallery:1.1.2'
+ compile 'com.abook23:godlibrary-gallery:1.2.0'
 ```
 ## Stop2
 ```java
@@ -55,6 +55,10 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 <img src="art/5.jpg" width="30%">
 
 ## 自定义相机
+```java
+CameraVideoActivity.startForResult(Activity activity, int requestCode);
+CameraVideoActivity.startForResult(Activity activity, int checkMax, int requestCode);
+```
 
 ```java
         CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
