@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="10.0dip"
-            android:background="@mipmap/hdr_off_64px"/>
+            android:background="@mipmap/gb_gallery_hd"/>
 
         <ImageView
             android:id="@+id/iv_camera_transform"
@@ -55,7 +55,7 @@
             android:layout_width="68.0dip"
             android:layout_height="68.0dip"
             android:layout_gravity="center"
-            android:src="@mipmap/camera_back"
+            android:src="@mipmap/camera_cancel"
             android:visibility="gone"/>
 
         <ImageView
@@ -63,7 +63,7 @@
             android:layout_width="68.0dip"
             android:layout_height="68.0dip"
             android:layout_gravity="center"
-            android:src="@mipmap/camera_yes"
+            android:src="@mipmap/camera_success"
             android:visibility="gone"/>
     </FrameLayout>
 

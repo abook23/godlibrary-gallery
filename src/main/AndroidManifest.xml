@@ -16,6 +16,7 @@
         <activity android:name=".PhotoActivity"/>
         <activity android:name=".ImageInfoActivity"/>
         <activity android:name=".SelectImagesActivity"/>
+        <activity android:name=".CameraVideoActivity"/>
     </application>
 
 </manifest>

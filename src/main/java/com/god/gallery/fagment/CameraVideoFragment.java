@@ -67,6 +67,7 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
     private CameraVideoFragment.Definition mDefinition;
     private CameraVideoFragment.DirectionOrientationListener mDirectionOrientationListener;
     private CameraVideoFragment.OnCameraVideoListener mListener;
+    private CameraVideoFragment.OnCameraVideoTouchListener mTouchListener;
     private int mOrientation;
     private SurfaceHolder mSurfaceHolder;
     TextView mTvSecond;
@@ -93,6 +94,10 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
         this.mListener = listener;
     }
 
+    public void setOnCameraVideoTouchListener(CameraVideoFragment.OnCameraVideoTouchListener listener) {
+        this.mTouchListener = listener;
+    }
+
     public CameraVideoFragment() {
         this.mDefinition = CameraVideoFragment.Definition.SD;
         this.mCameraId = 0;
@@ -108,9 +113,9 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
         this.context = this.getContext();
         this.mVideoProgress.setOnCameraVideoListener(new ClickListener());
         if (this.mDefinition == CameraVideoFragment.Definition.HD) {
-            this.iVvHd.setBackgroundResource(R.mipmap.hdr_on_64px);
+            this.iVvHd.setBackgroundResource(R.mipmap.gb_gallery_hd);
         } else {
-            this.iVvHd.setBackgroundResource(R.mipmap.hdr_off_64px);
+            this.iVvHd.setBackgroundResource(R.mipmap.gb_gallery_hd_off);
         }
 
         SurfaceHolder surfaceHolder = this.surfaceView.getHolder();
@@ -380,7 +385,6 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
     }
 
 
-
     /**
      * 设置相机 图片大小
      *
@@ -465,7 +469,6 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
     }
 
 
-
     public void onAttach(Context context) {
         super.onAttach(context);
     }
@@ -512,10 +515,10 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
         } else if (viewId == R.id.iv_hd) {//高清
             if (this.mDefinition == CameraVideoFragment.Definition.SD) {
                 this.mDefinition = CameraVideoFragment.Definition.HD;
-                this.iVvHd.setBackgroundResource(R.mipmap.hdr_on_64px);
+                this.iVvHd.setBackgroundResource(R.mipmap.gb_gallery_hd);
             } else {
                 this.mDefinition = CameraVideoFragment.Definition.SD;
-                this.iVvHd.setBackgroundResource(R.mipmap.hdr_off_64px);
+                this.iVvHd.setBackgroundResource(R.mipmap.gb_gallery_hd_off);
             }
             this.openCamera(this.mCameraId);
         } else if (viewId == R.id.iv_camera_transform) {//前后摄像头切换
@@ -526,6 +529,9 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
             }
             this.openCamera(this.mCameraId);
         } else if (viewId == R.id.camera_yes) {//选择当前拍摄
+            if (this.mTouchListener != null) {
+                mTouchListener.onSuccess(this.PHOTO_PATH);
+            }
             if (this.mListener != null) {
                 if (this.isPlayVideo) {
                     this.mListener.onFragmentResult(this.VIDEO_PATH, "mp4");
@@ -542,6 +548,9 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
             }
             this.mCamera.startPreview();
             this.delFile(this.PHOTO_PATH);
+            if (this.mTouchListener != null) {
+                mTouchListener.onCancel();
+            }
         }
     }
 
@@ -549,6 +558,8 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
         @Override
         public void onClick() {
             cameraTakePicture();
+            if (mTouchListener != null)
+                mTouchListener.onClick();
         }
 
         @Override
@@ -556,6 +567,8 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
             mCountDownTimer.start();
             initVideo();
             startVideo();
+            if (mTouchListener != null)
+                mTouchListener.onLongClick();
         }
 
         @Override
@@ -684,7 +697,18 @@ public class CameraVideoFragment extends Fragment implements Callback, OnClickLi
         }
     }
 
+
     public interface OnCameraVideoListener {
         void onFragmentResult(String path, String type);
+    }
+
+    public interface OnCameraVideoTouchListener {
+        void onLongClick();
+
+        void onClick();
+
+        void onSuccess(String path);
+
+        void onCancel();
     }
 }
