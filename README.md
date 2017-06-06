@@ -11,7 +11,7 @@ godlibrary-gallery
 
 ### Image
 <img src="art/20170606134058.jpg" width="30%">
-<img src="art/20170606134119.jpg" width="30%">
+<img src="art/20170606134119.jpg" width="30%">
 <img src="art/1.png" width="30%">
 
 # 使用方法
