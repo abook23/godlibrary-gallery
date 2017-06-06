@@ -10,6 +10,8 @@ godlibrary-gallery
 
 
 ### Image
+<img src="art/20170606134058.jpg" width="30%">
+<img src="art/20170606134119.jpg" width="30%">
 <img src="art/1.png" width="30%">
 
 # 使用方法
@@ -20,7 +22,11 @@ godlibrary-gallery
 ```
 ## Stop2
 ```java
-PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String> checkPath, int resultCode)
+
+PhotoActivity.startActivityForResult(Activity ac, int checkMax, ArrayList<String> checkPath, int resultCode);
+
+CameraVideoActivity.startForResult(Activity activity, int requestCode);
+CameraVideoActivity.startForResult(Activity activity, int checkMax, int requestCode);
 ```
 ## 示例
 ```java
@@ -55,10 +61,6 @@ ImageInfoActivity.start(Context context, int position, ArrayList<String> urls)
 <img src="art/5.jpg" width="30%">
 
 ## 自定义相机
-```java
-CameraVideoActivity.startForResult(Activity activity, int requestCode);
-CameraVideoActivity.startForResult(Activity activity, int checkMax, int requestCode);
-```
 
 ```java
         CameraVideoFragment videoFragment = CameraVideoFragment.newInstance();
